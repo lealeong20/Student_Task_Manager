@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
 
 export interface Task {
   _id?: string;
@@ -17,7 +16,7 @@ export interface Task {
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = `${environment.apiUrl}/api/tasks`;
+  private apiUrl = 'https://student-task-manager-ptsv.onrender.com/api/tasks';
 
   constructor(private http: HttpClient) {}
 
